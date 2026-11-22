@@ -1,1 +1,205 @@
 
+
+<!DOCTYPE html>
+
+<html lang="it">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Luna - Oltre ogni limite</title>
+
+<style>
+
+* { box-sizing: border-box; }
+
+body { margin:0; font-family:Arial,sans-serif; background:#101426; color:#f4f5ff; }
+
+header { text-align:center; padding:40px 20px; background:#19213b; }
+
+h1 { color:#c5b5ff; font-size:38px; }
+
+h2 { color:#c5b5ff; }
+
+p { line-height:1.7; }
+
+nav { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; padding:18px; background:#101426; }
+
+nav a { color:#d7ccff; text-decoration:none; padding:10px 14px; border:1px solid #514779; border-radius:20px; }
+
+main { max-width:850px; margin:auto; padding:20px; }
+
+section { background:#19213b; margin:20px 0; padding:25px; border-radius:16px; }
+
+button { background:#8870d8; color:white; border:0; border-radius:12px; padding:12px 20px; }
+
+textarea { width:100%; min-height:100px; padding:12px; border-radius:8px; }
+
+footer { text-align:center; padding:25px; color:#aaa; }
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+  <h1>Luna</h1>
+
+  <p>Oltre ogni limite</p>
+
+  <p>Uno spazio per immaginare, dialogare e creare insieme.</p>
+
+</header>
+
+<nav>
+
+  <a href="#inizio">Inizio</a>
+
+  <a href="#dialogo">Dialogo</a>
+
+  <a href="#crea">Crea</a>
+
+  <a href="#community">Community</a>
+
+  <a href="#idea">La tua idea</a>
+
+</nav>
+
+<main>
+
+<section id="inizio">
+
+  <h2>Benvenuto in Luna</h2>
+
+  <p>La tecnologia ha senso quando mette al centro le persone.</p>
+
+  <p>Non vogliamo costruire il futuro dei giovani senza i giovani. Vogliamo costruirlo insieme a loro.</p>
+
+  <p>Uno spazio di libertà, rispetto, responsabilità e collaborazione.</p>
+
+</section>
+
+<section id="dialogo">
+
+  <h2>Dialogo</h2>
+
+  <p>Uno spazio per confrontarsi con curiosità, rispetto e libertà.</p>
+
+  <textarea id="messaggio" placeholder="Scrivi qui il tuo pensiero..."></textarea>
+
+  <button onclick="salvaPensiero()">Salva il pensiero</button>
+
+  <p id="risposta"></p>
+
+</section>
+
+<section id="crea">
+
+  <h2>Crea</h2>
+
+  <p>Le idee possono diventare progetti. Raccontaci cosa vorresti realizzare.</p>
+
+  <textarea id="progetto" placeholder="La tua idea creativa..."></textarea>
+
+  <button onclick="salvaProgetto()">Salva la tua idea</button>
+
+  <p id="conferma"></p>
+
+</section>
+
+<section id="community">
+
+  <h2>Community</h2>
+
+  <p>Una comunità nasce dall'ascolto, dalla collaborazione e dal rispetto.</p>
+
+  <p>Questo spazio è una prima anteprima: la community online sarà realizzata in una fase successiva.</p>
+
+</section>
+
+<section id="idea">
+
+  <h2>Ho un'idea</h2>
+
+  <p>Ogni cambiamento può iniziare da una semplice idea.</p>
+
+  <textarea id="ideaPersonale" placeholder="Raccontaci la tua idea..."></textarea>
+
+  <button onclick="salvaIdea()">Conserva l'idea</button>
+
+  <p id="esito"></p>
+
+</section>
+
+<section id="trasparenza">
+
+  <h2>Trasparenza</h2>
+
+  <p>Luna è un progetto in costruzione.</p>
+
+  <p>Questa prima versione non è ancora un'intelligenza artificiale reale e non invia i tuoi messaggi a un server.</p>
+
+  <p>Le idee salvate restano nel browser di questo dispositivo.</p>
+
+</section>
+
+</main>
+
+<footer>
+
+  <p>Luna – Oltre ogni limite</p>
+
+  <p>La libertà cresce quando si accompagna alla responsabilità.</p>
+
+  <p>Un progetto indipendente, costruito insieme.</p>
+
+</footer>
+
+<script>
+
+function salvaPensiero() {
+
+  const testo = document.getElementById("messaggio").value;
+
+  localStorage.setItem("pensieroLuna", testo);
+
+  document.getElementById("risposta").textContent =
+
+    "Pensiero conservato su questo dispositivo.";
+
+}
+
+function salvaProgetto() {
+
+  const testo = document.getElementById("progetto").value;
+
+  localStorage.setItem("progettoLuna", testo);
+
+  document.getElementById("conferma").textContent =
+
+    "Idea conservata su questo dispositivo.";
+
+}
+
+function salvaIdea() {
+
+  const testo = document.getElementById("ideaPersonale").value;
+
+  localStorage.setItem("ideaPersonaleLuna", testo);
+
+  document.getElementById("esito").textContent =
+
+    "La tua idea è stata conservata su questo dispositivo.";
+
+}
+
+</script>
+
+</body>
+
+</html>
